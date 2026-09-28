@@ -1,0 +1,26 @@
+// import react from '@vitejs/plugin-react'
+// import { defineConfig } from 'vite'
+
+// // https://vite.dev/config/
+// export default defineConfig({
+//   plugins: [react()],
+// })
+
+
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import fs from 'fs'
+
+export default defineConfig({
+  plugins: [react()],
+
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+
+    https: {
+      key: fs.readFileSync('./certs/192.168.0.103+3-key.pem'),
+      cert: fs.readFileSync('./certs/192.168.0.103+3.pem'),
+    },
+  },
+})
