@@ -14,7 +14,7 @@ import "../css/AgriVision.css";
 const GATEWAY_URL = import.meta.env.VITE_GATEWAY_URL;
 
 // Delay between completed live inference requests.
-const LIVE_INTERVAL_MS = 300;
+const LIVE_INTERVAL_MS = 500;
 
 export default function AgriVisionScanner() {
   // ==========================================================
